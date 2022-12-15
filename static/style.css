@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.news-item {
+    display: flex;
+    height: 90px;
+    border: 1px solid #cccccc;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.news-name {
+    flex: 50%;
+}
+
+.news-time-and-location {
+    flex: 20%;
+}
+
+.news-img {
+    flex: 30;
+}
+
+.news-img img {
+    height: 80px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <h2>Новости в мире</h2>
+            {% for new in news %}
+                <div class="news-item">
+                    <div class="news-name">
+                        <a href="https://rg.ru/{{ new.news_link }}" target="_blank">{{ new.news_name }}</a>
+                    </div>
+                    <div class="news-time-and-location">
+                        {{ new.news_time }}
+                        {{ new.news_location }}
+                    </div>
+                    {% if new.news_img %}
+                        <div class="news-img">
+                            <img src="{{ new.news_img }}" alt="должна быть фотка">
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="column">
+            <h2>Тест API</h2>
+
+            <div>
+                <h3>GET method</h3>
+                <p>Здесь вы можете получить содержание поста</p>
+                <label>Введите номер поста, данные о котором хотите получить:<br>
+                    <input type="text" id="get_num">
+                </label>
+                <p id="to_get"></p>
+                <button id="get_b">Получить</button>
+            </div>
+
+            <div>
+                <h3>POST method</h3>
+                <p>Здесь вы можете создать свой пост</p>
+                <label>
+                    Введите содержание поста: <br>
+                    <textarea id="post_body" cols="30" rows="10"></textarea>
+                </label>
+                <p id="to_post"></p>
+                <button id="post_b">Создать</button>
+            </div>
+
+            <div>
+                <h3>PUT method</h3>
+                <p>Здесь вы можете изменить содержание поста</p>
+                <label>
+                    Введите номер поста, который хотите изменить: <br>
+                    <input type="text" id="put_num">
+                </label><br>
+                <label>
+                    Введите содержание: <br>
+                    <textarea id="put_body" cols="30" rows="10"></textarea>
+                </label>
+                <p id="to_put"></p>
+                <button id="put_b">Изменить</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='req.js') }}"></script>
+</body>
+</html>

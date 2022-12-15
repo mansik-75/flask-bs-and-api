@@ -30,7 +30,7 @@
         <div class="column">
             <h2>Тест API</h2>
 
-            <div>
+            <div class="get">
                 <h3>GET method</h3>
                 <p>Здесь вы можете получить содержание поста</p>
                 <label>Введите номер поста, данные о котором хотите получить:<br>
@@ -40,18 +40,18 @@
                 <button id="get_b">Получить</button>
             </div>
 
-            <div>
+            <div class="post">
                 <h3>POST method</h3>
                 <p>Здесь вы можете создать свой пост</p>
                 <label>
                     Введите содержание поста: <br>
-                    <textarea id="post_body" cols="30" rows="10"></textarea>
+                    <textarea id="post_body" cols="100" rows="10"></textarea>
                 </label>
                 <p id="to_post"></p>
                 <button id="post_b">Создать</button>
             </div>
 
-            <div>
+            <div class="put">
                 <h3>PUT method</h3>
                 <p>Здесь вы можете изменить содержание поста</p>
                 <label>
@@ -60,7 +60,7 @@
                 </label><br>
                 <label>
                     Введите содержание: <br>
-                    <textarea id="put_body" cols="30" rows="10"></textarea>
+                    <textarea id="put_body" cols="100" rows="10"></textarea>
                 </label>
                 <p id="to_put"></p>
                 <button id="put_b">Изменить</button>

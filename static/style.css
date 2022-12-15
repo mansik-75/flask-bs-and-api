@@ -30,3 +30,18 @@
 .news-img img {
     height: 80px;
 }
+
+.get, .post, .put {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#to_get, #to_post, #to_put {
+    color: #9C1A1C;
+}
+
+textarea, input {
+    margin: 10px;
+}

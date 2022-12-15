@@ -7,6 +7,9 @@ $('#get_b').on('click', function () {
         success: function (response) {
             console.log('success GET')
             $('#to_get').text('Содержание поста: ' + response.body)
+        },
+        error: function (response) {
+            $('#to_get').text('Ошибка, поста с таким ID не существует')
         }
     })
 })
@@ -23,6 +26,9 @@ $('#post_b').on('click', function () {
         success: function (response) {
             console.log('success POST')
             $('#to_post').text('ID созданного поста: ' + response.id)
+        },
+        error: function (response) {
+            $('#to_post').text('Ошибка, поста с таким ID не существует')
         }
     })
 })
@@ -40,6 +46,9 @@ $('#put_b').on('click', function () {
         success: function (response) {
             console.log('success PUT')
             $('#to_put').text('Успешно для ID: ' + response.id)
+        },
+        error: function (response) {
+            $('#to_put').text('Ошибка, поста с таким ID не существует')
         }
     })
 })

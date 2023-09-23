@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'dasopdfjlskfjdss'
 
 
-@app.route('/main')
+@app.route('/')
 def main_page():
     context = {
         'news': []

@@ -4,12 +4,10 @@ services:
   app:
     image: flask_bs:latest
     working_dir: /app
-    build:
-      dockerfile: Dockerfile
-      context: ..
+    build: .
     ports:
       - "5000:5000"
-  second:
+  whoami:
     image: flask_bs:latest
     expose:
       - "5000"
